@@ -10,5 +10,7 @@ Login com Sucesso
     
     Fill Text   id=user_email           papito@parodify.com
     Fill Text   id=user_password        pwd123
+
+    Click       css=input[type=submit]
     
-    Sleep       10
+    Sleep       5
