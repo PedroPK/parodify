@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on darwin)" generated="20210210 00:32:56.182" rpa="false">
+<suite id="s1" name="Login" source="/Users/pedroc.f.santos/Downloads/Development/rfw/parodify/login.robot">
+<test id="s1-t1" name="Login com Sucesso">
+<kw name="Open Browser" library="Browser">
+<tags>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+</tags>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.
+Use `New Page` directly instead of `Open Browser` for production and automated execution.
+See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
+<arguments>
+<arg>https://parodify.herokuapp.com/users/sign_in</arg>
+<arg>chromium</arg>
+</arguments>
+<msg timestamp="20210210 00:32:57.600" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20210210 00:32:57.600" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210210 00:32:59.060" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<msg timestamp="20210210 00:32:59.061" level="INFO">{"acceptDownloads": false, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false}</msg>
+<msg timestamp="20210210 00:32:59.086" level="INFO">Successfully created context with options: {"acceptDownloads":false,"ignoreHTTPSErrors":false,"bypassCSP":false,"deviceScaleFactor":1,"isMobile":false,"hasTouch":false,"javaScriptEnabled":true,"offline":false,"hideRfBrowser":false}</msg>
+<msg timestamp="20210210 00:33:04.224" level="INFO">Successfully initialized new page object and opened url: https://parodify.herokuapp.com/users/sign_in</msg>
+<status status="PASS" starttime="20210210 00:32:57.599" endtime="20210210 00:33:04.224"></status>
+</kw>
+<kw name="Get Text" library="Browser">
+<tags>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+</tags>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<arguments>
+<arg>label[for=user_email]</arg>
+<arg>contains</arg>
+<arg>Email</arg>
+</arguments>
+<status status="PASS" starttime="20210210 00:33:04.224" endtime="20210210 00:33:04.430"></status>
+</kw>
+<kw name="Fill Text" library="Browser">
+<tags>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+</tags>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<arguments>
+<arg>id=user_email</arg>
+<arg>papito@parodify.com</arg>
+</arguments>
+<msg timestamp="20210210 00:33:04.433" level="INFO">Fills the text 'papito@parodify.com' in the given field.</msg>
+<status status="PASS" starttime="20210210 00:33:04.433" endtime="20210210 00:33:04.634"></status>
+</kw>
+<kw name="Fill Text" library="Browser">
+<tags>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+</tags>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<arguments>
+<arg>id=user_password</arg>
+<arg>pwd123</arg>
+</arguments>
+<msg timestamp="20210210 00:33:04.637" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210210 00:33:04.635" endtime="20210210 00:33:04.717"></status>
+</kw>
+<kw name="Click" library="Browser">
+<tags>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+</tags>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<arguments>
+<arg>css=input[type=submit]</arg>
+</arguments>
+<status status="PASS" starttime="20210210 00:33:04.718" endtime="20210210 00:33:08.380"></status>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<tags>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+</tags>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<arguments>
+<arg>css=a[href$=sign_out]</arg>
+<arg>visible</arg>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20210210 00:33:08.821" level="INFO">Wait for Element with selector: css=a[href$=sign_out]</msg>
+<status status="PASS" starttime="20210210 00:33:08.381" endtime="20210210 00:33:08.822"></status>
+</kw>
+<status status="PASS" starttime="20210210 00:32:57.593" endtime="20210210 00:33:08.823" critical="yes"></status>
+</test>
+<doc>Testes da Página de Login</doc>
+<status status="PASS" starttime="20210210 00:32:56.185" endtime="20210210 00:33:09.160"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210210 00:32:57.600" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
