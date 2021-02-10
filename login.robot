@@ -12,5 +12,10 @@ Login com Sucesso
     Fill Text   id=user_password        pwd123
 
     Click       css=input[type=submit]
+
+    Wait For Elements State      css=a[href$=sign_out]    visible     10
+    #ˆ = Starts with
+    #* = Contains
+    #$ = Finish with
     
-    Sleep       5
+    #Sleep       5
