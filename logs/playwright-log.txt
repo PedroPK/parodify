@@ -1,0 +1,11 @@
+{"level":30,"time":"2021-02-10T01:18:20.790Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Listening on 52862"}
+{"level":30,"time":"2021-02-10T01:18:22.343Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Changed active context"}
+{"level":30,"time":"2021-02-10T01:18:23.578Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Video path: undefined"}
+{"level":30,"time":"2021-02-10T01:18:23.578Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Changed active page"}
+{"level":30,"time":"2021-02-10T01:18:26.937Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Retrieved dom property for element label[for=user_email] containing Email"}
+{"level":30,"time":"2021-02-10T01:18:37.301Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Changed active context"}
+{"level":30,"time":"2021-02-10T01:18:37.317Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Changing current active page"}
+{"level":30,"time":"2021-02-10T01:18:37.317Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Changed active page"}
+{"level":30,"time":"2021-02-10T01:18:37.343Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Changed active context"}
+{"level":30,"time":"2021-02-10T01:18:37.344Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Changing current active page"}
+{"level":30,"time":"2021-02-10T01:18:37.344Z","pid":44431,"hostname":"Pedros-Mac-mini.local","msg":"Changed active page"}
