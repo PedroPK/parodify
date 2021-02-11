@@ -4,6 +4,14 @@ Library         Browser
 
 Test Teardown   Take Screenshot
 
+***Keywords***
+Login With
+    [Arguments]     ${email_arg}        ${password_arg}
+    Fill Text       id=user_email       ${email_arg}
+    Fill Text       id=user_password    ${password_arg}
+    Click           css=input[type=submit]
+
+
 ***Test Cases
 Login com Sucesso
     #Open Browser    https://parodify.herokuapp.com/users/sign_in    chromium
@@ -11,10 +19,7 @@ Login com Sucesso
 
     Get Text    label[for=user_email]   contains    Email
     
-    Fill Text   id=user_email           papito@parodify.com
-    Fill Text   id=user_password        pwd123
-
-    Click       css=input[type=submit]
+    Login With  papito@parodify.com     pwd123
 
     Wait For Elements State      css=a[href$=sign_out]    visible     10
     #ˆ = Starts with
@@ -27,33 +32,24 @@ Wrong Password
     #Open Browser    https://parodify.herokuapp.com/users/sign_in
     New Page        https://parodify.herokuapp.com/users/sign_in
 
-    Fill Text       id=user_email       papito@parodify.com
-    Fill Text       id=user_password    wrongPassword
-
-    Click           css=input[type=submit]
+    Login With      papito@parodify.com     wrongPassword
 
     Get Text        css=.is-danger .message-body    ==    Opps! Dados de acesso incorretos!
 
 Email do not exists
     #Open Browser    https://parodify.herokuapp.com/users/sign_in
     New Page        https://parodify.herokuapp.com/users/sign_in
-    Fill Text       id=user_email            pedroca@parodify.com
-    Fill Text       id=user_password    anyPassword
-    Click           css=input[type=submit]
+    Login With      pedroca@parodify.com        anyPassword
     Get Text        css=.is-danger .message-body    ==    Opps! Dados de acesso incorretos!
 
 Empty Email
     #Open Browser    https://parodify.herokuapp.com/users/sign_in
     New Page        https://parodify.herokuapp.com/users/sign_in
-    Fill Text       id=user_email            ${EMPTY}
-    Fill Text       id=user_password    anyPassword
-    Click           css=input[type=submit]
+    Login With      ${EMPTY}            anyPassword
     Get Text        css=.is-danger .message-body    ==    Opps! Dados de acesso incorretos!
 
 Empty Password
     #Open Browser    https://parodify.herokuapp.com/users/sign_in
     New Page        https://parodify.herokuapp.com/users/sign_in
-    Fill Text       id=user_email            papito@parodify.com
-    Fill Text       id=user_password    ${EMPTY}
-    Click           css=input[type=submit]
+    Login With      papito@parodify.com     ${EMPTY}
     Get Text        css=.is-danger .message-body    ==    Opps! Dados de acesso incorretos!
