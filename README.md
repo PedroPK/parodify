@@ -32,3 +32,4 @@ Steps to Set Up the Environment
 
 7. Execution command
  - robot -d ./logs login.robot
+ - roboy -d ./logs -i smoke robot

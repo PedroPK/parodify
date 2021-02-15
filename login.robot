@@ -9,6 +9,7 @@ Resource        resources/home_actions.robot
 
 ***Test Cases
 Login com Sucesso
+    [Tags]      smoke
     #Open Browser    https://parodify.herokuapp.com/users/sign_in    chromium
     Access Login Page
 
