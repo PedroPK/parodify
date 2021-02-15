@@ -28,3 +28,7 @@ Steps to Set Up the Environment
 6. Install RobotFramework-Browser library
  - pip install robotframework-browser
  - rfbrowser init
+
+
+7. Execution command
+ - robot -d ./logs login.robot

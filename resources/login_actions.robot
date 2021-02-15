@@ -1,3 +1,6 @@
+**Settings
+Documentation       Ações relacionadas à Tela de Login
+
 ***Keywords***
 Access Login Page
     New Page        https://parodify.herokuapp.com/users/sign_in

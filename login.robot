@@ -2,9 +2,10 @@
 Documentation   Testes da Página de Login
 Library         Browser
 
-Test Teardown   Take Screenshot
+#Test Teardown   Take Screenshot
 
 Resource        resources/login_actions.robot
+Resource        resources/home_actions.robot
 
 ***Test Cases
 Login com Sucesso
@@ -15,7 +16,8 @@ Login com Sucesso
     
     Login With  papito@parodify.com     pwd123
 
-    Wait For Elements State      css=a[href$=sign_out]    visible     10
+    Is Logout Link Visible
+
     #ˆ = Starts with
     #* = Contains
     #$ = Finish with
