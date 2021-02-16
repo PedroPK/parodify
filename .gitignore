@@ -1,4 +1,6 @@
 *.html
+report.html
 *.png
 *.txt
 *.xml
+.DS_STORE
