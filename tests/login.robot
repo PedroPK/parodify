@@ -4,8 +4,7 @@ Library         Browser
 
 #Test Teardown   Take Screenshot
 
-Resource        resources/login_actions.robot
-Resource        resources/home_actions.robot
+Resource        ../resources/base.robot
 
 ***Test Cases
 Login com Sucesso
