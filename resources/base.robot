@@ -7,13 +7,13 @@ Resource            actions/login_actions.robot
 Resource            actions/home_actions.robot
 
 ***Keywords
+Wait For H2 by Text
+    [Arguments]                             ${text_value} 
+    Wait For Element Be Visible By XPATH  //h2[contains(text(), ${text_value})]
+
 Get Text Content by CSS
     [Arguments]     ${css_value}                   ${content}
     Get Text        css=${css_value}    equal      ${content} 
-
-Get Text Content by XPATH
-    [Arguments]     ${xpath_value}
-    Get Text        xpath=${xpath_value}
 
 Get Class by XPATH
     [Arguments]     ${xpath_value}                          ${class_value}
