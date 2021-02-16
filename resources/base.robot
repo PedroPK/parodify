@@ -14,3 +14,7 @@ Get Text Content by CSS
 Get Text Content by XPATH
     [Arguments]     ${xpath_value}                   
     Get Text        xpath=${xpath_value}
+
+Wait For Element Be Visible By XPATH
+    [Arguments]     ${xpath_value}
+    Wait For Elements State     xpath=${xpath_value}        visible         10
