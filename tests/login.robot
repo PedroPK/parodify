@@ -9,7 +9,6 @@ Resource        ../resources/base.robot
 ***Test Cases
 Login com Sucesso
     [Tags]      smoke
-    #Open Browser    https://parodify.herokuapp.com/users/sign_in    chromium
     Access Login Page
 
     Get Text    label[for=user_email]   contains    Email
@@ -25,25 +24,21 @@ Login com Sucesso
     #Sleep       5
 
 Wrong Password
-    #Open Browser    https://parodify.herokuapp.com/users/sign_in
     Access Login Page
     Login With      papito@parodify.com     wrongPassword
     Assert Wrong Access Data
 
 Email do not exists
-    #Open Browser    https://parodify.herokuapp.com/users/sign_in
     Access Login Page
     Login With      pedroca@parodify.com        anyPassword
     Assert Wrong Access Data
 
 Empty Email
-    #Open Browser    https://parodify.herokuapp.com/users/sign_in
     Access Login Page
-    Login With      ${EMPTY}            anyPassword
+    Login With      ${EMPTY}                anyPassword
     Assert Wrong Access Data
 
 Empty Password
-    #Open Browser    https://parodify.herokuapp.com/users/sign_in
     Access Login Page
     Login With      papito@parodify.com     ${EMPTY}
     Assert Wrong Access Data
