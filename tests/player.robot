@@ -11,18 +11,14 @@ Reproduzir paródia Bug de Manhã
     Login With  papito@parodify.com  pwd123
     Is Logout Link Visible
 
-    #Get Text Content by XPATH  //h2[contains(text(), Buscar)]
     Wait For Element Be Visible By XPATH  //h2[contains(text(), Buscar)]
     Click                       css=a[href*=search]
-    #Get Text                    css=h2      equal       Buscar
     
-    #Click       css=a[href$="/4"]      Replacing to use a Relative XPATH Selector
     Wait For Element Be Visible By XPATH     //img[contains(@src, "sertanejo.png")]/..
     Click       xpath=//img[contains(@src, "sertanejo.png")]/..
     Get Text Content by CSS     h2             Sertanejo
 
     Wait For Element Be Visible By XPATH  //p[contains(text(), "Marcus e Debug")]/..
-    #Get Text Content by XPATH   //p[contains(text(), "Marcus e Debug")]/..
     Click                       xpath=//p[contains(text(), "Marcus e Debug")]/..
 
     Get Text Content by XPATH  //h2[contains(text(), "Bug de Manhã")]
@@ -42,5 +38,10 @@ Acessar album Highway to PROD
 
 
     #Get Text Content by XPATH      //h2[contains(text(), "Um Tester no Pedaço")]
+    Get Class by XPATH  //h2[contains(text(), "Um Tester no Pedaço")]/../../div/a/i     fa-play-circle
+
     Click       xpath=//h2[contains(text(), "Um Tester no Pedaço")]/../../div[contains(@class, play-button)]/a
-    Sleep       5
+    Sleep       2
+
+    Get Class by XPATH  //h2[contains(text(), "Um Tester no Pedaço")]/../../div/a/i     fa-pause-circle
+    Sleep       2
