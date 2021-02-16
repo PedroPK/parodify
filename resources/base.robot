@@ -12,8 +12,12 @@ Get Text Content by CSS
     Get Text        css=${css_value}    equal      ${content} 
 
 Get Text Content by XPATH
-    [Arguments]     ${xpath_value}                   
+    [Arguments]     ${xpath_value}
     Get Text        xpath=${xpath_value}
+
+Get Class by XPATH
+    [Arguments]     ${xpath_value}                          ${class_value}
+    Get Classes     xpath=${xpath_value}      contains      ${class_value}
 
 Wait For Element Be Visible By XPATH
     [Arguments]     ${xpath_value}
