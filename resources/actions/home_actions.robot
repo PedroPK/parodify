@@ -6,10 +6,13 @@ Library         Browser
 Is Logout Link Visible
     Wait For Elements State      css=a[href$=sign_out]    visible     10
 
-Search For
-    [Arguments]     ${search_text}
+Click Search
     Wait For Element Be Visible By XPATH          //a[contains(@href, "/search")]
     Click                                         //a[contains(@href, "/search")]
+
+Search For
+    [Arguments]     ${search_text}
+    Click Search
 
     #Take Screenshot
 
