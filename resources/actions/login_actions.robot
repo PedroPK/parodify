@@ -1,7 +1,12 @@
 **Settings
 Documentation       Ações relacionadas à Tela de Login
 
+Library             Browser
+
 ***Keywords***
+Open Chromium in Login Page
+    Open Browser    https://parodify.herokuapp.com/users/sign_in        chromium
+
 Access Login Page
     New Page        https://parodify.herokuapp.com/users/sign_in
 
