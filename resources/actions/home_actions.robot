@@ -11,11 +11,11 @@ Search For
     Wait For Element Be Visible By XPATH          //a[contains(@href, "/search")]
     Click                                         //a[contains(@href, "/search")]
 
-    Take Screenshot
+    #Take Screenshot
 
     Wait For Element Be Visible By XPATH          //input[@id="search"]     
     Fill Text                               xpath=//input[@id="search"]       ${search_text}
 
-    Take Screenshot
+    #Take Screenshot
 
     Press Keys                              xpath=//input[@id="search"]     Enter
