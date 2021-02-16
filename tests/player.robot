@@ -3,22 +3,6 @@ Documentation       Testes do Player de Paródias
 Library             Browser
 Resource            ../resources/base.robot
 
-***Keywords
-Click Sertanejo Category
-    Wait For Element Be Visible By XPATH     //img[contains(@src, "sertanejo.png")]/..
-    Click       xpath=//img[contains(@src, "sertanejo.png")]/..
-    Get Text Content by CSS     h2             Sertanejo
-
-Click Artist/Title
-    [Arguments]         ${text_value}
-    Wait For Element Be Visible By XPATH  //p[contains(text(), ${text_value})]/..
-    Click                       xpath=//p[contains(text(), ${text_value})]/..
-
-Press Play/Pause Button
-    [Arguments]         ${text_value}                 ${class_value}
-    Get Class by XPATH  //h2[contains(text(), ${text_value})]/../../div/a/i     ${class_value}
-    Click       xpath=//h2[contains(text(), ${text_value})]/../../div[contains(@class, play-button)]/a
-
 ***Test Cases
 Reproduzir paródia Bug de Manhã
     [Tags]          sertanejo
