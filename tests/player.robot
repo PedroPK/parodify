@@ -4,10 +4,6 @@ Library             Browser
 Resource            ../resources/base.robot
 
 ***Keywords
-Click Buscar
-    Wait For H2 by Text         Buscar
-    Click                       css=a[href*=search]
-
 Click Sertanejo Category
     Wait For Element Be Visible By XPATH     //img[contains(@src, "sertanejo.png")]/..
     Click       xpath=//img[contains(@src, "sertanejo.png")]/..
@@ -22,7 +18,6 @@ Press Play/Pause Button
     [Arguments]         ${text_value}                 ${class_value}
     Get Class by XPATH  //h2[contains(text(), ${text_value})]/../../div/a/i     ${class_value}
     Click       xpath=//h2[contains(text(), ${text_value})]/../../div[contains(@class, play-button)]/a
-
 
 ***Test Cases
 Reproduzir paródia Bug de Manhã

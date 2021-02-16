@@ -5,6 +5,7 @@ Library             Browser
 
 Resource            actions/login_actions.robot
 Resource            actions/home_actions.robot
+Resource            actions/search.robot
 
 ***Keywords
 Wait For H2 by Text

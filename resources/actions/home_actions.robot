@@ -10,15 +10,7 @@ Click Search
     Wait For Element Be Visible By XPATH          //a[contains(@href, "/search")]
     Click                                         //a[contains(@href, "/search")]
 
-Search For
-    [Arguments]     ${search_text}
-    Click Search
+Click Buscar
+    Wait For H2 by Text         Buscar
+    Click                       css=a[href*=search]
 
-    #Take Screenshot
-
-    Wait For Element Be Visible By XPATH          //input[@id="search"]     
-    Fill Text                               xpath=//input[@id="search"]       ${search_text}
-
-    #Take Screenshot
-
-    Press Keys                              xpath=//input[@id="search"]     Enter
